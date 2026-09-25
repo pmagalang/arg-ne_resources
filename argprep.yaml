@@ -1,0 +1,22 @@
+# Paths
+maf_dir: rice_mafs  ###folder where you have your maf files
+reference_fasta: rice_mafs/ref.fa  ##the ref genome that you used to get you mafs using anchorwave
+
+# Output location
+results_dir: rice_results ###direcoty where your output will go
+
+# Direct MAF pipeline options
+max_missing_count: 6   ##the number of missing data you would like keep in your final vcf file (eg: 25% of you sample size)
+#max_missing_fraction: 0.0
+mask_indel_adjacent_snps: false  
+allow_multiallelic_snps: true
+add_ref: false
+
+# Rule-specific resources
+maf_threads: 2
+maf_mem_mb: 96000
+maf_time: "72:00:00"
+
+# SLURM profile defaults
+slurm_account: jrigrp
+slurm_partition: low
